@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "py-jira"
+version = "0.1.0"
+description = "Je ne veux tout simplement plus faire de Jira."
+readme = "README.md"
+requires-python = ">=3.11"
+
+authors = [
+    { name = "MI77-LAB" }
+]
+
+dependencies = [
+    "requests",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
