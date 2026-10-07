@@ -38,15 +38,15 @@ for issue in issues:
 # search by text
 issues = jira.search("""
     project = MI77
-    AND text ~ "some inspirations"
+    AND text ~ "some inspirations and a little magic"
 """)
 ```
 ```python
 # create an issue
 issue = jira.create(
     project="MI77",
-    issue_type="Exprimentation",
-    summary="Automate this boring JIRA thing",
+    issue_type="py_jira",
+    summary="Automate this boring Jira thing",
     description=(
         "Support issue lookup, JQL search, ticket creation, comments, "
         "updates, and workflow transitions from Python. "
@@ -61,13 +61,13 @@ print(issue.key)
 issue = jira.get("MI77-7")
 
 issue.update(
-    summary="tryin' to make JIRA less painful"
+    summary="tryin' to make Jira less painful"
 )
 ```
 ```python
 # Add comment
 issue.comment(
-    "time to see some magic."
+    "still hating Jira, but at least now it feels like a backend work."
 )
 ```
 ```python
